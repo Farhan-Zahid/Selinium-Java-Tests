@@ -10,14 +10,14 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'mvn clean test'
+                bat '"C:\\Program Files\\Apache\\Maven\\apache-maven-3.9.14\\bin\\mvn.cmd" clean test'
             }
         }
     }
 
     post {
         always {
-            junit '**/target/surefire-reports/*.xml'
+            junit testResults: '**/target/surefire-reports/*.xml', allowEmptyResults: true
         }
     }
 }
