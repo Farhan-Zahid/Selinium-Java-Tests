@@ -27,7 +27,7 @@ public class LoginTest {
         driver.get("https://the-internet.herokuapp.com/login");
 
         WebElement username = driver.findElement(By.id("username"));
-        WebElement password = driver.findElement(By.id("password"));git remote -v
+        WebElement password = driver.findElement(By.id("password"));
         WebElement loginButton = driver.findElement(By.cssSelector("button[type='submit']"));
 
         username.sendKeys("tomsmith");
